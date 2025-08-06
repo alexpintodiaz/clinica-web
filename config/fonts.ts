@@ -1,10 +1,18 @@
-import { Playfair_Display, Inter, Lato, Fira_Code as FontMono } from "next/font/google";
+import { Alex_Brush, Cormorant_Garamond, Inter, Lato, Fira_Code as FontMono } from "next/font/google";
 
-// Fuente elegante para títulos (similar al logo)
-export const fontSerif = Playfair_Display({
+// Fuente cursiva elegante para el nombre de la doctora (similar al logo)
+// Alex Brush tiene la característica específica de la 'a' con círculo y palito
+export const fontScript = Alex_Brush({
+  subsets: ["latin"],
+  variable: "--font-script",
+  weight: ["400"],
+});
+
+// Fuente serif elegante para títulos principales
+export const fontSerif = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-serif",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 // Fuente moderna para texto general

@@ -24,8 +24,8 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex flex-col justify-start items-start hover-scale" href="/">
-            <h1 className="text-2xl font-serif font-bold text-clinic-slate-700 leading-tight">
-              Margarita Reina
+            <h1 className="text-3xl font-script font-semibold doctor-name leading-tight">
+              Dra. Margarita Reina
             </h1>
             <span className="text-sm font-secondary font-medium text-gold">
               Cirugía Oral y Maxilofacial
