@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { fontSans, fontSerif, fontSecondary } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
@@ -36,6 +36,8 @@ export default function RootLayout({
         className={clsx(
           "min-h-screen text-gray-900 bg-white font-sans antialiased",
           fontSans.variable,
+          fontSerif.variable,
+          fontSecondary.variable,
         )}
       >
         <Providers>

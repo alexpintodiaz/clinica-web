@@ -1,3 +1,280 @@
 @import "tailwindcss";
+@config "../tailwind.config.js";
 
-@config "../tailwind.config.js"
+/* ===========================
+   VARIABLES DE COLORES PROFESIONALES
+   Basadas en la imagen de la clínica
+   =========================== */
+:root {
+  /* Paleta principal inspirada en la imagen */
+  --color-primary: #B8860B;        /* Dorado elegante */
+  --color-primary-light: #D4AF37;  /* Oro claro */
+  --color-primary-dark: #8B6914;   /* Dorado oscuro */
+  
+  --color-secondary: #2F4F4F;      /* Azul grisáceo profesional */
+  --color-secondary-light: #708090; /* Gris azulado claro */
+  --color-secondary-dark: #1C3333;  /* Azul oscuro elegante */
+  
+  --color-accent: #4682B4;         /* Azul acero */
+  --color-accent-light: #87CEEB;   /* Azul cielo suave */
+  
+  --color-neutral: #F8F8FF;        /* Blanco fantasma */
+  --color-neutral-100: #F5F5F5;    /* Blanco hueso */
+  --color-neutral-200: #E8E8E8;    /* Gris muy claro */
+  --color-neutral-300: #D3D3D3;    /* Gris claro */
+  --color-neutral-700: #4A5568;    /* Gris texto */
+  --color-neutral-800: #2D3748;    /* Gris oscuro */
+  --color-neutral-900: #1A202C;    /* Casi negro */
+  
+  /* Colores complementarios */
+  --color-success: #48BB78;        /* Verde suave */
+  --color-warning: #ED8936;        /* Naranja suave */
+  --color-error: #E53E3E;          /* Rojo suave */
+  
+  /* Sombras elegantes */
+  --shadow-soft: 0 2px 15px rgba(184, 134, 11, 0.1);
+  --shadow-medium: 0 4px 25px rgba(47, 79, 79, 0.15);
+  --shadow-strong: 0 8px 35px rgba(47, 79, 79, 0.2);
+  
+  /* Gradientes profesionales */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary-light), var(--color-secondary));
+  --gradient-neutral: linear-gradient(135deg, var(--color-neutral), var(--color-neutral-100));
+}
+
+/* ===========================
+   ESTILOS TIPOGRÁFICOS GLOBALES
+   =========================== */
+.font-serif {
+  font-family: var(--font-serif), 'Georgia', serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans), 'Helvetica Neue', sans-serif;
+}
+
+.font-secondary {
+  font-family: var(--font-secondary), 'Arial', sans-serif;
+}
+
+/* Títulos principales con estilo elegante */
+h1 {
+  @apply font-serif font-bold;
+  color: var(--color-secondary-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h2 {
+  @apply font-serif font-semibold;
+  color: var(--color-secondary);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+h3 {
+  @apply font-secondary font-semibold;
+  color: var(--color-secondary);
+  letter-spacing: -0.005em;
+}
+
+h4, h5, h6 {
+  @apply font-secondary font-medium;
+  color: var(--color-neutral-800);
+}
+
+/* Texto del cuerpo */
+p {
+  @apply font-sans;
+  color: var(--color-neutral-700);
+  line-height: 1.6;
+}
+
+/* ===========================
+   COMPONENTES GLOBALES PROFESIONALES
+   =========================== */
+
+/* Botones con estilo profesional */
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--color-secondary);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Cards con estilo profesional */
+.card-professional {
+  background: var(--color-neutral);
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.card-professional:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+  border-color: var(--color-primary-light);
+}
+
+/* Secciones hero profesionales */
+.hero-section {
+  background: var(--gradient-neutral);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(184, 134, 11, 0.08), transparent 50%);
+  pointer-events: none;
+}
+
+/* Navegación profesional */
+.nav-professional {
+  background: rgba(248, 248, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-neutral-200);
+  box-shadow: 0 2px 20px rgba(47, 79, 79, 0.08);
+}
+
+/* Texto dorado para elementos destacados */
+.text-gold {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.text-gold-light {
+  color: var(--color-primary-light);
+}
+
+/* Fondos con gradiente */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-secondary {
+  background: var(--gradient-secondary);
+}
+
+.bg-gradient-neutral {
+  background: var(--gradient-neutral);
+}
+
+/* Elementos de entrada suaves */
+.fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Separadores elegantes */
+.divider-gold {
+  height: 2px;
+  background: var(--gradient-primary);
+  border-radius: 1px;
+  margin: 2rem 0;
+}
+
+/* ===========================
+   UTILIDADES RESPONSIVE
+   =========================== */
+
+/* Espaciado consistente */
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.container-padding {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+/* Texto responsive */
+.text-hero {
+  @apply text-4xl sm:text-5xl lg:text-6xl;
+}
+
+.text-subtitle {
+  @apply text-lg sm:text-xl lg:text-2xl;
+}
+
+/* ===========================
+   MEJORAS DE ACCESIBILIDAD
+   =========================== */
+
+/* Focus visible mejorado */
+.focus-visible:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Contraste mejorado para texto */
+.text-high-contrast {
+  color: var(--color-neutral-900);
+  font-weight: 500;
+}
+
+/* ===========================
+   ANIMACIONES PROFESIONALES
+   =========================== */
+
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.hover-scale {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}

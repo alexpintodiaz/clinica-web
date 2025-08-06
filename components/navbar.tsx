@@ -19,15 +19,15 @@ export const Navbar = () => {
     <HeroUINavbar 
       maxWidth="xl" 
       position="sticky" 
-      className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-cyan-100"
+      className="nav-professional"
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex flex-col justify-start items-start" href="/">
-            <h1 className="text-2xl font-bold text-cyan-600 leading-tight">
+          <NextLink className="flex flex-col justify-start items-start hover-scale" href="/">
+            <h1 className="text-2xl font-serif font-bold text-clinic-slate-700 leading-tight">
               Margarita Reina
             </h1>
-            <span className="text-sm font-medium text-cyan-500">
+            <span className="text-sm font-secondary font-medium text-gold">
               Cirugía Oral y Maxilofacial
             </span>
           </NextLink>
@@ -37,8 +37,9 @@ export const Navbar = () => {
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
-                  "text-cyan-700 hover:text-cyan-600 font-medium transition-colors",
-                  "data-[active=true]:text-cyan-600 data-[active=true]:font-semibold",
+                  "text-clinic-slate-600 hover:text-clinic-gold-600 font-secondary font-medium transition-all duration-300",
+                  "data-[active=true]:text-clinic-gold-600 data-[active=true]:font-semibold",
+                  "hover:transform hover:scale-105",
                 )}
                 href={item.href}
               >
@@ -57,7 +58,7 @@ export const Navbar = () => {
           <Button
             as={Link}
             href="/contacto"
-            className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold"
+            className="btn-primary hover-lift font-secondary"
             size="sm"
           >
             Agendar Cita
@@ -66,15 +67,15 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <NavbarMenuToggle className="text-cyan-600" />
+        <NavbarMenuToggle className="text-clinic-gold-600" />
       </NavbarContent>
 
-      <NavbarMenu className="bg-white/95 backdrop-blur-sm">
-        <div className="mx-4 mt-2 flex flex-col gap-2">
+      <NavbarMenu className="nav-professional">
+        <div className="mx-4 mt-6 flex flex-col gap-4">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item.label}-${index}`}>
               <Link
-                className="text-cyan-700 hover:text-cyan-600 font-medium"
+                className="text-clinic-slate-600 hover:text-clinic-gold-600 font-secondary font-medium text-lg transition-colors duration-300"
                 href={item.href}
                 size="lg"
               >
@@ -82,6 +83,16 @@ export const Navbar = () => {
               </Link>
             </NavbarMenuItem>
           ))}
+          <div className="mt-4 pt-4 border-t border-clinic-neutral-200">
+            <Button
+              as={Link}
+              href="/contacto"
+              className="btn-primary w-full font-secondary"
+              size="md"
+            >
+              Agendar Cita
+            </Button>
+          </div>
         </div>
       </NavbarMenu>
     </HeroUINavbar>
