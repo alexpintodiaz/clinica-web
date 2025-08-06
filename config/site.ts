@@ -1,69 +1,61 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Dra. Margarita Reina",
+  description: "Especialista en Cirugía Oral y Maxilofacial. Procedimientos estéticos faciales con más de 15 años de experiencia.",
   navItems: [
     {
-      label: "Home",
+      label: "Inicio",
       href: "/",
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "Sobre Mí",
+      href: "/sobre-mi",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      label: "Servicios",
+      href: "/servicios",
     },
     {
-      label: "Blog",
-      href: "/blog",
+      label: "Productos",
+      href: "/productos",
     },
     {
-      label: "About",
-      href: "/about",
+      label: "Contacto",
+      href: "/contacto",
     },
   ],
   navMenuItems: [
     {
-      label: "Profile",
-      href: "/profile",
+      label: "Inicio",
+      href: "/",
     },
     {
-      label: "Dashboard",
-      href: "/dashboard",
+      label: "Sobre Mí",
+      href: "/sobre-mi",
     },
     {
-      label: "Projects",
-      href: "/projects",
+      label: "Servicios",
+      href: "/servicios",
     },
     {
-      label: "Team",
-      href: "/team",
+      label: "Productos",
+      href: "/productos",
     },
     {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
+      label: "Contacto",
+      href: "/contacto",
     },
   ],
+  contact: {
+    address: "Av. Principal 123, Centro Médico",
+    phone: "+58 (212) 555-0123",
+    email: "consultas@dramargaritareina.com",
+    hours: "Lun - Vie: 8:00 AM - 6:00 PM",
+  },
   links: {
-    github: "https://github.com/heroui-inc/heroui",
-    twitter: "https://twitter.com/hero_ui",
-    docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    whatsapp: "https://wa.me/582125550123",
+    instagram: "https://instagram.com/dramargaritareina",
+    facebook: "https://facebook.com/dramargaritareina",
   },
 };
