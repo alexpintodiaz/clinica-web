@@ -280,7 +280,6 @@ export default function ProductosPage() {
               <Card
                 key={producto.id}
                 className="bg-gradient-to-br from-white to-slate-50 shadow-lg hover:shadow-2xl transition-all duration-300 border border-cyan-50"
-                isPressable
               >
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-cyan-50 to-sky-50 rounded-t-lg">
                   <Image
